@@ -37,7 +37,7 @@ pipeline {
                     // Assigning permissions 0644 grants read and write access to the file owner, and read-only access to group and other users.
                     sh "dzdo chown -R nobody2:nobody /sandbox/blogs/bgsponsored__word-3458-v2/uploads"
                     sh "dzdo chown -R nobody2:nobody /sandbox/blogs/bgsponsored__word-3458-v2/content/uploads"
-                    sh "cd /sandbox/blogs/bgsponsored__word-3458-v2/uploads && touch test.txt"
+                    sh "cd /sandbox/blogs/bgsponsored__word-3458-v2/uploads && dzdo touch test.txt"
                     //dzdo -u root chmod 644 '${wordpressPath}${params.staticSitemapsDir}${env.YEAR}-${env.MONTH_NUMBER}.html'"
                 }
             }
