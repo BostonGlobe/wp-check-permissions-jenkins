@@ -35,7 +35,8 @@ pipeline {
                     // This command recreates the HTML sitemap exclusively for the current month.
                     //sh "dzdo -u root wp bdc-html-sitemap create --path='${wordpressPath}' --allow-root"
                     // Assigning permissions 0644 grants read and write access to the file owner, and read-only access to group and other users.
-                    sh "dzdo chown -R nobody:nobody /sandbox/blogs/bgsponsored__word-3458-v2/uploads"
+                    sh "dzdo chown -R nobody2:nobody /sandbox/blogs/bgsponsored__word-3458-v2/uploads"
+                    sh "dzdo chown -R nobody2:nobody /sandbox/blogs/bgsponsored__word-3458-v2/content/uploads"
                     //dzdo -u root chmod 644 '${wordpressPath}${params.staticSitemapsDir}${env.YEAR}-${env.MONTH_NUMBER}.html'"
                 }
             }
